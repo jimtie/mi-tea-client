@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
 import Routes from './config/routes'
-import Header from './components/Header'
 import Navbar from './components/Navbar'
 import UserModel from './models/user'
+// import CityModel from './models/city'
+// import './scss/custom.scss'
 
 class App extends Component {
   state = {
@@ -14,6 +15,7 @@ class App extends Component {
     this.setState({ currentUser: user })
     localStorage.setItem("user", JSON.stringify(user))
     localStorage.setItem("uid", user.id)
+    localStorage.setItem("uname", user.name)
   }
 
   logout = (event) => {
@@ -28,20 +30,32 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
+  // async fetchCityList(){
+  //   let response = await CityModel.all();
+  //   this.setState({
+  //     cityList: response.data
+  //   });
+  // }
+
+  // componentDidMount() {
+  //   this.fetchCityList();
+  // }
+
   render() {
     return (
       <div>
-        <Header
+        <Navbar
           currentUser={this.state.currentUser}
           logout={this.logout}
           history={this.props.history}
           setCurrentUser={this.setCurrentUser}
         />
-        <Navbar />
         <div className="container">
           <Routes
             currentUser={this.state.currentUser}
             setCurrentUser={this.setCurrentUser}
+
+          
 
           />
         </div>

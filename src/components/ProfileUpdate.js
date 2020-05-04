@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
-import CityModel from '../models/city'
 
 
 class ProfileUpdate extends Component {
   state = {
-    name: this.props.user.name,
-    city: this.props.user.city,
-    joinDate: Intl.DateTimeFormat('en-US').format(new Date(this.props.user.joinDate)),
-    cityList: [],
+    firstName: this.props.user.firstName,
+    lastName: this.props.user.lastName,
+    email: this.props.user.email,
   }
 
   handleChange = (event) => {
@@ -16,33 +14,7 @@ class ProfileUpdate extends Component {
     })
   }
 
-  componentDidMount(){
-    CityModel.all()
-    .then(data => {
-      this.setState({
-        cityList: data.data,
-      });
-    })
-    .catch(err => {
-      console.log(err);
-    });
-  }
-
   render() {
-    let cityOptions = this.state.cityList.map( (city, index) => {
-      return(
-        <option
-          key={index}
-          value={city._id}>{city.name}</option>
-      );
-    }
-  );
-
-  if (this.state.city.id === -1){
-    cityOptions.unshift(
-      <option key={-1}>Select a city...</option>
-    )
-  }
 
   return(
     <div className="container mt-4">
@@ -52,37 +24,35 @@ class ProfileUpdate extends Component {
             Profile <i className='btn fas fa-times float-right'
             onClick={this.props.toggleUpdate}/>
         </h4>
-        <small className="float-right">Joined {this.state.joinDate}</small>
         <form onSubmit={this.props.updateProfile}>
           <div className="form-group">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="firstName">First Name</label>
             <input
               className="form-control form-control-lg"
               type="text"
-              id="name"
-              name="name"
-              value={this.state.name}
+              id="firstName"
+              name="firstName"
+              value={this.state.firstName}
               onChange={this.handleChange}
               />
-            </div>
-            <div className="form-group">
-              <label htmlFor="city">Current city</label>
-              <select
-                onChange={this.handleChange}
-                className="form-control form-control-lg custom-selectr"
-                id="city"
-                name="city"
-                value={this.state.city.id}
-                >
-                {cityOptions}
-              </select>
-            </div>
-            <button
-              className="btn btn-primary float-right" type="submit">Save</button>
-          </form>
-        </div>
+          </div>
+          <div className="form-group">
+            <label htmlFor="lastName">Last Name</label>
+            <input
+              className="form-control form-control-lg"
+              type="text"
+              id="lastName"
+              name="lastName"
+              value={this.state.lastName}
+              onChange={this.handleChange}
+              />
+          </div>
+          <button
+            className="btn btn-primary float-right" type="submit">Save</button>
+        </form>
       </div>
     </div>
+  </div>
   )
 }
 }

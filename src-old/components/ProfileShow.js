@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 class ProfileShow extends Component {
   state = {
     user: this.props.user,
+    joinDate: Intl.DateTimeFormat('en-US').format(new Date(this.props.user.joinDate)),
   };
 
   render() {
@@ -14,15 +15,18 @@ class ProfileShow extends Component {
               Profile <i className='btn fas fa-pen float-right'
               onClick={this.props.toggleUpdate}/>
             </h4>
+            <small className="float-right">Joined {this.state.joinDate}</small>
           <form>
             <div className="form-group">
-              <label htmlFor="firstName">First Name</label>
+              <label htmlFor="name">Name</label>
               <div className="form-control form-control-lg border-0">
-                {this.state.user.firstName}
+                {this.state.user.name}
               </div>
-              <label htmlFor="lastName">Last Name</label>
+            </div>
+            <div className="form-group">
+              <label htmlFor="city">Current city</label>
               <div className="form-control form-control-lg border-0">
-                {this.state.user.lastName}
+                {this.state.user.city.name}
               </div>
             </div>
           </form>

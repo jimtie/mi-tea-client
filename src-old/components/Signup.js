@@ -25,10 +25,9 @@ class Signup extends Component {
         lastName: "",
         email: "",
         password: "",
-
       })
       console.log(res.data)
-      this.props.setCurrentUser(res.data)
+      this.props.setCurrentUser(res.data.data)
       this.props.history.push("/profile")
       // this.handleCloseModal();  this isn't working
     })
@@ -44,25 +43,25 @@ class Signup extends Component {
             <h4 className="mb-3">Sign up</h4>
             <form onSubmit={this.handleSubmit}>
               <div className="form-group">
-                <label htmlFor="firstName">First Name</label>
+                <label htmlFor="name">First Name</label>
                 <input
                   onChange={this.handleChange}
                   className="form control form-control-lg"
                   type="text"
-                  id="firstName"
-                  name="firstName"
-                  value={this.state.name}
+                  id="name"
+                  name="name"
+                  value={this.state.firstName}
                   />
               </div>
               <div className="form-group">
-                <label htmlFor="lastName">Last Name</label>
+                <label htmlFor="name">Last Name</label>
                 <input
                   onChange={this.handleChange}
                   className="form control form-control-lg"
                   type="text"
-                  id="lastName"
-                  name="lastName"
-                  value={this.state.name}
+                  id="name"
+                  name="name"
+                  value={this.state.lastName}
                   />
               </div>
               <div className="form-group">
@@ -85,6 +84,17 @@ class Signup extends Component {
                   id="password"
                   name="password"
                   value={this.state.password}
+                  />
+              </div>
+              <div className="form-group">
+                <label htmlFor="password2">Confirm Password</label>
+                <input
+                  onChange={this.handleChange}
+                  className="form control form-control-lg"
+                  type="password"
+                  id="password2"
+                  name="password2"
+                  value={this.state.password2}
                   />
               </div>
               <button className="btn btn-primary pull-left" type="submit" onClick={this.props.onClick}>Sign up</button>

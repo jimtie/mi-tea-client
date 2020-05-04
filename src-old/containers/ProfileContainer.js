@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ProfileShow from '../components/ProfileShow';
 import ProfileUpdate from '../components/ProfileUpdate';
+// import ProfilePosts from '../components/ProfilePosts';
 import UserModel from '../models/user';
 
 class ProfileContainer extends Component {
@@ -12,8 +13,8 @@ class ProfileContainer extends Component {
 	updateProfile = (event) => {
 		event.preventDefault();
 		let data = {
-			firstName: event.target.firstName.value,
-			lastName: event.target.lastName.value,
+			name: event.target.name.value,
+			city: event.target.city.value,
 		};
 
 		UserModel.update(data)
@@ -54,6 +55,7 @@ class ProfileContainer extends Component {
 		return (
 			<div>
 				{form}
+{/*				<ProfilePosts/>*/}
 			</div>
 		)
 	}
