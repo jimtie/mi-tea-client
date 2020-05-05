@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import Home from '../components/Home'
 import ProfileContainer from '../containers/ProfileContainer'
 import TeaContainer from '../containers/TeaContainer'
+import MachineContainer from '../containers/MachineContainer'
 
  function Routes(props){
    return(
@@ -19,6 +20,10 @@ import TeaContainer from '../containers/TeaContainer'
        </Route>
        <Route path="/teas">
          <TeaContainer
+           />
+       </Route>
+       <Route path="/machine">
+         <MachineContainer
            />
        </Route>
      </Switch>

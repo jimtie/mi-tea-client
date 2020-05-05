@@ -11,8 +11,8 @@ class ProfileShow extends Component {
         <div className="row">
           <div className="col-md-4 offset-md-4">
             <h4 className="mb-3">
-              Profile <i className='btn fas fa-pen float-right'
-              onClick={this.props.toggleUpdate}/>
+              Profile <button className='btn fas fa-pen float-right'
+              onClick={this.props.toggleUpdate}>Edit</button>
             </h4>
           <form>
             <div className="form-group">
@@ -23,6 +23,10 @@ class ProfileShow extends Component {
               <label htmlFor="lastName">Last Name</label>
               <div className="form-control form-control-lg border-0">
                 {this.state.user.lastName}
+              </div>
+              <label htmlFor="email">Email</label>
+              <div className="form-control form-control-lg border-0">
+                {this.state.user.email}
               </div>
             </div>
           </form>

@@ -47,6 +47,17 @@ class ProfileUpdate extends Component {
               onChange={this.handleChange}
               />
           </div>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              className="form-control form-control-lg"
+              type="email"
+              id="email"
+              name="email"
+              value={this.state.email}
+              disabled
+              />
+          </div>
           <button
             className="btn btn-primary float-right" type="submit">Save</button>
         </form>
