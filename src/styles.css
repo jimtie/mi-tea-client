@@ -1,0 +1,22 @@
+/*.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+*/
+.teaImage {
+	width: 15%;
+	display: inline-block;
+}
+
+.teaName {
+	display: inline-block;
+}
+
+.teaPrice {
+	display: inline-block;
+}
