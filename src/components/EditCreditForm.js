@@ -38,7 +38,6 @@ function EditCreditForm(props){
           name="city"
           value={props.credit.expiration}
           maxLength={4}
-          required={true}
           placeholder="Expiration"
           />
       	</div>
