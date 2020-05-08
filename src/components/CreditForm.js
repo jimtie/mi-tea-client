@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Modal from "react-bootstrap/Modal";
-import EditAddressForm from './EditAddressForm';
-import DeleteAddressForm from './DeleteAddressForm';
+import EditCreditForm from './EditCreditForm';
+import DeleteCreditForm from './DeleteCreditForm';
 
 class CreditForm extends Component {
 
@@ -24,13 +24,13 @@ class CreditForm extends Component {
 			switch (this.props.action){
 				case 'create':
 				case 'edit':
-				form = <EditAddressForm
+				form = <EditCreditForm
 					credit={this.state.credit}
 					onInputChange={this.onInputChange.bind(this)}
 					/>
 				break;
 				case 'delete':
-				form = <DeleteAddressForm
+				form = <DeleteCreditForm
 					credit={this.state.credit}
 					/>
 				break;

@@ -80,7 +80,7 @@ class Addresses extends Component{
             <div className="col-md-6">
               <h4 className="mb-3">
                 ADDRESS
-                <button className='btn fas fa-pen btn-outline-primary ml-5 inline float-right' onClick={this.setActionCreate.bind(this)}>
+                <button className='btn fas fa-pen btn-outline-info ml-5 inline float-right' onClick={this.setActionCreate.bind(this)}>
                   Add
                 </button>
               </h4>
