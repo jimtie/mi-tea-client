@@ -7,7 +7,7 @@ import AddressContainer from '../containers/AddressContainer'
 import TeaContainer from '../containers/TeaContainer'
 import TeaItem from '../components/TeaItem'
 import MachineContainer from '../containers/MachineContainer'
-import CreditCardsContainer from '../containers/CreditCardsContainer'
+import CreditsContainer from '../containers/CreditsContainer'
 
  function Routes(props){
    return(
@@ -28,7 +28,7 @@ import CreditCardsContainer from '../containers/CreditCardsContainer'
            />
        </Route>
        <Route path="/profile/creditcard">
-         <CreditCardsContainer
+         <CreditsContainer
            currentUser={props.currentUser}
            />
        </Route>

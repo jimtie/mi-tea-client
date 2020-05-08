@@ -1,29 +1,29 @@
 import React, { Component } from 'react';
-import CreditCardsModel from '../models/creditCard';
+import CreditModel from '../models/credit';
 import ProfileList from '../components/ProfileList';
-import CreditCards from '../components/CreditCards';
+import Credits from '../components/Credits';
 
-class CreditCardsContainer extends Component {
+class CreditsContainer extends Component {
   state = {
     user: this.props.currentUser,
-    creditCards: [],
+    credits: [],
   }
 
   componentDidMount(){
-    this.fetchCreditCards()
+    this.fetchCredits()
   }
 
-  async fetchCreditCards(){
-    let res = await CreditCardsModel.user(this.props.currentUser.id);
+  async fetchCredits(){
+    let res = await CreditModel.user(this.props.currentUser.id);
     this.setState({
-      creditCards: res.data,
+      credits: res.data,
     });
     console.log(this.state)
   }
 
   render(){
       return(
-        <div className="creditCardContainer row">
+        <div className="creditContainer row">
         <div className="col-lg-3 offset-1">
           <ProfileList
             user={this.state.user}
@@ -31,10 +31,10 @@ class CreditCardsContainer extends Component {
           />
         </div>
         <div className="col-lg-8">
-          <CreditCards
-            creditCards={this.state.creditCards}
+          <Credits
+            credits={this.state.credits}
             currentUser={this.props.currentUser}
-            fetchCreditCards={this.fetchCreditCards.bind(this)}
+            fetchCredits={this.fetchCredits.bind(this)}
             />
         </div>
       </div>
@@ -42,5 +42,5 @@ class CreditCardsContainer extends Component {
     }
   }
 
-export default CreditCardsContainer;
+export default CreditsContainer;
 
