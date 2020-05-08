@@ -8,6 +8,7 @@ import TeaContainer from '../containers/TeaContainer'
 import TeaItem from '../components/TeaItem'
 import MachineContainer from '../containers/MachineContainer'
 import CreditsContainer from '../containers/CreditsContainer'
+import OrderContainer from '../containers/OrderContainer'
 
  function Routes(props){
    return(
@@ -25,11 +26,13 @@ import CreditsContainer from '../containers/CreditsContainer'
        <Route path="/profile/address">
          <AddressContainer
            currentUser={props.currentUser}
+           logout={props.logout}
            />
        </Route>
        <Route path="/profile/creditcard">
          <CreditsContainer
            currentUser={props.currentUser}
+           logout={props.logout}
            />
        </Route>
        <Route path="/teas/:id?" render={routeProps =>
@@ -38,6 +41,12 @@ import CreditsContainer from '../containers/CreditsContainer'
           />
         }
         />
+        <Route exact path="/bag">
+         <OrderContainer
+           currentUser={props.currentUser}
+           setCurrentUser={props.setCurrentUser}
+           />
+       </Route>
        <Route path="/machine">
          <MachineContainer
            />

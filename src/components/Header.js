@@ -43,7 +43,7 @@ class Header extends Component {
               </li>
               
               <li className="nav-item">
-                <a className="nav-link btn btn-outline-dark ml-3" href="/logout" onClick={this.props.logout}>Logout</a>
+                <a className="nav-link btn btn-outline-dark ml-3 mr-4" href="/logout" onClick={this.props.logout}>Logout</a>
               </li>
               </>
             :
@@ -54,10 +54,15 @@ class Header extends Component {
 
 
               <li className="nav-item">
-                <button className="nav-link btn btn-outline-dark ml-3" onClick={this.handleLogin}>Login</button>
+                <button className="nav-link btn btn-outline-dark ml-3 mr-4" onClick={this.handleLogin}>Login</button>
               </li>
             </>
           }
+
+            <li className="nav-item">
+              <NavLink className="nav-link btn btn-outline-dark ml-5" to="/bag">My Bag</NavLink>
+            </li>
+
             </ul>
           </div>
         </div>
