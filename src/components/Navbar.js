@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import '../styles.css'
 
 
 class Header extends Component {
@@ -18,22 +19,22 @@ class Header extends Component {
       <nav className="navbar navbar-expand-md navbar-dark bg-dark">
         <div className="container">
           <div className="collapse navbar-collapse row" id="navbarsExample04">
-            <ul className="navbar-nav ml-auto col-md-12">
+            <ul className="navbar-nav ml-auto col-md-12 d-flex justify-content-md-center">
 
-              <li className= "nav-item col-1 offset-2">
-                <NavLink className="nav-link" to="/teas">Teas</NavLink>
+              <li className= "nav-item ml-5 mr-5">
+                <NavLink className="nav-link" to="/teas">TEAS</NavLink>
               </li>
 
-              <li className="nav-item col-1 offset-1">
-                <NavLink className="nav-link" to="/machine">Machine</NavLink>
+              <li className="nav-item ml-5 mr-5">
+                <NavLink className="nav-link" to="/machine">MACHINE</NavLink>
               </li>
               
-              <li className="nav-item col-1 offset-1">
-                <NavLink className="nav-link" to="/About">About</NavLink>
+              <li className="nav-item ml-5 mr-5">
+                <NavLink className="nav-link" to="/About">ABOUT</NavLink>
               </li>
 
-              <li className="nav-item col-1 offset-1">
-                <NavLink className="nav-link" to="/contact">contact</NavLink>
+              <li className="nav-item ml-5 mr-5">
+                <NavLink className="nav-link" to="/contact">CONTACT</NavLink>
               </li>
 
             </ul>

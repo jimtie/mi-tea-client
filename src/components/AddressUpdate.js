@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 
 
-class ProfileUpdate extends Component {
+class AddressUpdate extends Component {
   state = {
-    firstName: this.props.user.firstName,
-    lastName: this.props.user.lastName,
-    email: this.props.user.email,
+    address1: this.props.address.address1,
+    address2: this.props.address.address2,
+    city: this.props.address.city,
+    zipcode: this.props.address.zipcode,
   }
 
   handleChange = (event) => {
@@ -19,14 +20,13 @@ class ProfileUpdate extends Component {
   return(
     <div className="container mt-4">
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-md-4 offset-md-2">
           <h4 className="mb-3">
-            PROFILE
-        </h4>
-        <form onSubmit={this.props.updateProfile} className="card mt-4 border-light">
-          <div className="card-body">
+            Address
+          </h4>
+        <form onSubmit={this.props.updateProfile}>
           <div className="form-group">
-            <label htmlFor="firstName"><small><strong>FIRST NAME</strong></small></label>
+            <label htmlFor="firstName">First Name</label>
             <input
               className="form-control form-control-lg"
               type="text"
@@ -37,7 +37,7 @@ class ProfileUpdate extends Component {
               />
           </div>
           <div className="form-group">
-            <label htmlFor="lastName"><small><strong>LAST NAME</strong></small></label>
+            <label htmlFor="lastName">Last Name</label>
             <input
               className="form-control form-control-lg"
               type="text"
@@ -48,7 +48,7 @@ class ProfileUpdate extends Component {
               />
           </div>
           <div className="form-group">
-            <label htmlFor="email"><small><strong>EMAIL</strong></small></label>
+            <label htmlFor="email">Email</label>
             <input
               className="form-control form-control-lg"
               type="email"
@@ -58,10 +58,8 @@ class ProfileUpdate extends Component {
               disabled
               />
           </div>
-          <button className="btn btn-primary float-right" type="submit">
-            Save
-          </button>
-          </div>
+          <button
+            className="btn btn-primary float-right" type="submit">Save</button>
         </form>
       </div>
     </div>
@@ -70,4 +68,4 @@ class ProfileUpdate extends Component {
 }
 }
 
-  export default ProfileUpdate
+  export default AddressUpdate

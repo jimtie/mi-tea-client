@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-import TeaShow from './TeaShow'
+import TeaItem from './TeaItem'
 
 class TeaIndex extends Component {
 
   render() {
     let teas = this.props.teas.map((tea) =>{
     return (
-      <TeaShow
+      <TeaItem
         key={tea._id}
         tea={tea}
+        teaId={this.props.teaId}
+        show={this.props.show}
+        handleCloseShow={this.props.handleCloseShow}
+        handleShow={this.props.handleShow}
         />
       );
     })

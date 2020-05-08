@@ -9,30 +9,34 @@ class ProfileShow extends Component {
     return(
       <div className="container mt-4">
         <div className="row">
-          <div className="col-md-4 offset-md-4">
+          <div className="col-md-6">
             <h4 className="mb-3">
-              Profile <button className='btn fas fa-pen float-right'
-              onClick={this.props.toggleUpdate}>Edit</button>
+              PROFILE
+              <button className='btn fas fa-pen float-right btn-outline-primary ml-5 inline' onClick={this.props.toggleUpdate}>
+              Edit
+              </button>
             </h4>
-          <form>
-            <div className="form-group">
-              <label htmlFor="firstName">First Name</label>
-              <div className="form-control form-control-lg border-0">
-                {this.state.user.firstName}
+            <form className="card mt-4">
+              <div className="card-body">
+                <div className="form-group">
+                  <label htmlFor="firstName"><small><strong>FIRST NAME</strong></small></label>
+                  <div className="form-control form-control-lg border-0">
+                    {this.state.user.firstName}
+                  </div>
+                  <label htmlFor="lastName"><small><strong>LAST NAME</strong></small></label>
+                  <div className="form-control form-control-lg border-0">
+                    {this.state.user.lastName}
+                  </div>
+                  <label htmlFor="email"><small><strong>EMAIL</strong></small></label>
+                  <div className="form-control form-control-lg border-0">
+                    {this.state.user.email}
+                  </div>
+                </div>
               </div>
-              <label htmlFor="lastName">Last Name</label>
-              <div className="form-control form-control-lg border-0">
-                {this.state.user.lastName}
-              </div>
-              <label htmlFor="email">Email</label>
-              <div className="form-control form-control-lg border-0">
-                {this.state.user.email}
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
     );
   }
 }

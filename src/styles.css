@@ -1,13 +1,4 @@
-/*.navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top;
-}
 
-.navbar .navbar-collapse {
-  text-align: center;
-}
-*/
 .teaImage {
 	width: 15%;
 	display: inline-block;
@@ -19,4 +10,17 @@
 
 .teaPrice {
 	display: inline-block;
+}
+
+.card-text {
+	line-height: 100%;
+}
+
+.block {
+	display: block;
+	line-height: 200%;
+}
+
+.align-center {
+	text-align: center;
 }

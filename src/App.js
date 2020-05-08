@@ -4,6 +4,7 @@ import Routes from './config/routes'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
 import UserModel from './models/user'
+import TeaModel from './models/tea'
 
 class App extends Component {
   state = {
@@ -42,7 +43,7 @@ class App extends Component {
           <Routes
             currentUser={this.state.currentUser}
             setCurrentUser={this.setCurrentUser}
-
+            logout={this.logout}
           />
         </div>
       </div>
