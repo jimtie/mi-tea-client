@@ -17,8 +17,10 @@ class TeaIndex extends Component {
       );
     })
     return (
-        <div className="col-lg-6 offset-3 list-group">
+      <div>
+        <div className="col-lg-6 mx-auto list-group">
           {teas}
+        </div>
         </div>
     )
   }
