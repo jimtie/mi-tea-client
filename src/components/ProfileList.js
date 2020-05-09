@@ -5,8 +5,10 @@ class ProfileList extends Component{
 	render(){
 	  return (
 	  	<>
+			<div className="mt-3 shadow-sm list-group text-center">
+				<small className="list-group-item"><strong>Welcome {this.props.user.firstName} {this.props.user.lastName}!</strong></small>
+			</div>
 			<div className="mt-3 shadow-sm list-group">
-				<small className="list-group-item">Welcome {this.props.user.firstName} {this.props.user.lastName}!</small>
 				<a href="/profile" className="list-group-item list-group-item-action col-md-12">
 {/*	        	<img className="teaImage rounded" src={this.state.tea.images.icon.src} />*/}
         	<div className="profilePage"><small>PROFILE</small></div>

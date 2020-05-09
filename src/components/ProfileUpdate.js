@@ -19,7 +19,7 @@ class ProfileUpdate extends Component {
   return(
     <div className="container mt-4">
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-md-8">
           <h4 className="mb-3">
             PROFILE
         </h4>

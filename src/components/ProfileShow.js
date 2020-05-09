@@ -9,10 +9,10 @@ class ProfileShow extends Component {
     return(
       <div className="container mt-4">
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-8">
             <h4 className="mb-3">
               PROFILE
-              <button className='btn fas fa-pen float-right btn-outline-primary ml-5 inline' onClick={this.props.toggleUpdate}>
+              <button className='btn fas fa-pen float-right btn-outline-info ml-5 inline' onClick={this.props.toggleUpdate}>
               Edit
               </button>
             </h4>
