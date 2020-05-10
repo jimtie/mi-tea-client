@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import TeaModel from '../models/tea';
 import TeaIndex from '../components/TeaIndex';
 import TeaShow from '../components/TeaShow';
-// import teaRoutes from '../config/teaRoutes'
 
 class TeaContainer extends Component {
 
   state= {
     teas: [],
-    cart: [],
-    totalItems: 0,
-    totalAmount: 0,
-    cartBounce: false,
-    quantity: 1,
+    cart: this.props.cart,
+    totalItems: this.props.totalItems,
+    totalAmount: this.props.total,
+    cartBounce: this.props.cartBounce,
+    quantity: this.props.quantity,
+    removeProduct: this.props.removeProduct,
+    updateQuantity: this.props.updateQuantity,
+    productQuantity: this.props.productQuantity,
     teaId: '',
     tea: '',
     show: false,
@@ -47,86 +49,6 @@ class TeaContainer extends Component {
     }
   }
 
-  // Add to Cart
-  handleAddToCart(selectedTeas) {
-    let cartItem = this.state.cart;
-    let teaID = selectedTeas.id;
-    let teaQty = selectedTeas.quantity;
-    if (this.checkTea(teaID)) {
-      console.log("hi");
-      let index = cartItem.findIndex(x => x.id == teaID);
-      cartItem[index].quantity =
-        Number(cartItem[index].quantity) + Number(teaQty);
-      this.setState({
-        cart: cartItem
-      });
-    } else {
-      cartItem.push(selectedTeas);
-    }
-    this.setState({
-      cart: cartItem,
-      cartBounce: true
-    });
-    setTimeout(
-      function() {
-        this.setState({
-          cartBounce: false,
-          quantity: 1
-        });
-        console.log(this.state.quantity);
-        console.log(this.state.cart);
-      }.bind(this),
-      1000
-    );
-    this.sumTotalItems(this.state.cart);
-    this.sumTotalAmount(this.state.cart);
-  }
-  handleRemoveTea(id, e) {
-    let cart = this.state.cart;
-    let index = cart.findIndex(x => x.id == id);
-    cart.splice(index, 1);
-    this.setState({
-      cart: cart
-    });
-    this.sumTotalItems(this.state.cart);
-    this.sumTotalAmount(this.state.cart);
-    e.preventDefault();
-  }
-
-  checkTea(teaID) {
-    let cart = this.state.cart;
-    return cart.some(function(item) {
-      return item.id === teaID;
-    });
-  }
-  sumTotalItems() {
-    let total = 0;
-    let cart = this.state.cart;
-    total = cart.length;
-    this.setState({
-      totalItems: total
-    });
-  }
-
-  sumTotalAmount() {
-    let total = 0;
-    let cart = this.state.cart;
-    for (let i = 0; i < cart.length; i++) {
-      total += cart[i].price * parseInt(cart[i].quantity);
-    }
-    this.setState({
-      totalAmount: total
-    });
-  }
-
-  //Reset Quantity
-  updateQuantity(qty) {
-    console.log("quantity added...");
-    this.setState({
-      quantity: qty
-    });
-  }
-
   render(){
     return (
       <div className='teasComponent'>
@@ -134,8 +56,8 @@ class TeaContainer extends Component {
           teas={this.state.teas}
           teaId={this.state.teaId}
           show={this.state.show}
-          addToCart={this.handleAddToCart}
-          teaQty={this.state.quantity}
+          addToCart={this.props.addToCart}
+          productQty={this.props.productQuantity}
           updateQty={this.updateQuantity}
           handleCloseShow={this.handleCloseShow}
           handleShow={this.handleShow}

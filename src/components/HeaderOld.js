@@ -4,11 +4,6 @@ import Modal from "react-bootstrap/Modal";
 import Signup from "./Signup";
 import Login from "./Login";
 
-import CartScrollBar from "./CartScrollBar";
-import EmptyCart from "./EmptyCart";
-import CSSTransitionGroup from "react-transition-group/cjs/CSSTransition";
-import { findDOMNode } from "react-dom";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
@@ -16,11 +11,7 @@ class Header extends Component {
   state = {
       signup: false,
       login: false,
-      currentUser: this.props.currentUser,
-
-      showCart: false,
-      cart: this.props.cartItems,
-      mobileSearch: false,
+      currentUser: this.props.currentUser
     };
 
   handleCloseSignUp = () => this.setState({signup: false});
@@ -30,91 +21,7 @@ class Header extends Component {
   handleSwitchSL = () => this.setState({signup: false, login: true});
   handleSwitchLS = () => this.setState({login: false, signup: true});
 
-  handleCloseCart = () => this.setState({showCart: false});
-  handleShowCart = () => this.setState({showCart: true});
-
-  handleCart(e) {
-    e.preventDefault();
-    this.setState({
-      showCart: !this.state.showCart
-    });
-  }
-  handleSubmit(e) {
-    e.preventDefault();
-  }
-  handleClickOutside(event) {
-    const cartNode = findDOMNode(this.refs.cartPreview);
-    const buttonNode = findDOMNode(this.refs.cartButton);
-    if (cartNode.classList.contains("active")) {
-      if (!cartNode || !cartNode.contains(event.target)) {
-        this.setState({
-          showCart: false
-        });
-        event.stopPropagation();
-      }
-    }
-  }
-  componentDidMount() {
-    document.addEventListener(
-      "click",
-      this.handleClickOutside.bind(this),
-      true
-    );
-  }
-  componentWillUnmount() {
-    document.removeEventListener(
-      "click",
-      this.handleClickOutside.bind(this),
-      true
-    );
-  }
-
-
   render(props) {
-
-    let cartItems;
-    cartItems = this.state.cart.map(product => {
-      return (
-        <li className="cart-item" key={product.name}>
-          <img className="product-image" src={product.image} />
-          <div className="product-info">
-            <p className="product-name">{product.name}</p>
-            <p className="product-price">{product.price}</p>
-          </div>
-          <div className="product-total">
-            <p className="quantity">
-              {product.quantity} {product.quantity > 1 ? "Nos." : "No."}{" "}
-            </p>
-            <p className="amount">{product.quantity * product.price}</p>
-          </div>
-          <a
-            className="product-remove"
-            href="#"
-            onClick={this.props.removeProduct.bind(this, product.id)}
-          >
-            ×
-          </a>
-        </li>
-      );
-    });
-    let view;
-    if (cartItems.length <= 0) {
-      view = <EmptyCart />;
-    } else {
-      view = (
-        <CSSTransitionGroup
-          transitionName="fadeIn"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}
-          component="ul"
-          className="cart-items"
-        >
-          {cartItems}
-        </CSSTransitionGroup>
-      );
-    }
-
-
     const {signup,login} = this.state;
     return (
     <>
@@ -153,11 +60,10 @@ class Header extends Component {
           }
 
             <li className="nav-item">
-              <button className="nav-link btn btn-outline-dark ml-5" onClick={this.handleShowCart} ref="cartButton">My Bag({this.props.totalItems})</button>
+              <NavLink className="nav-link btn btn-outline-dark ml-5" to="/bag">My Bag({this.props.totalItems})</NavLink>
             </li>
 
             </ul>
-
           </div>
         </div>
       </nav>
@@ -186,25 +92,6 @@ class Header extends Component {
             <u>Sign up</u>
           </button>
         </Modal.Footer>
-      </Modal>
-
-    {/*Cart Modal*/}
-      <Modal show={this.state.showCart} onHide={this.handleCloseCart}>
-        <div className={
-            this.state.showCart ? "cart-preview active" : "cart-preview"
-          }
-          ref="cartPreview"
-        >
-          <CartScrollBar>{view}</CartScrollBar>
-          <div className="action-block">
-            <button
-              type="button"
-              className={this.state.cart.length > 0 ? " " : "disabled"}
-            >
-              PROCEED TO CHECKOUT
-            </button>
-          </div>
-        </div>
       </Modal>
     </>
     );

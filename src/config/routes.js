@@ -8,7 +8,7 @@ import TeaContainer from '../containers/TeaContainer'
 import TeaItem from '../components/TeaItem'
 import MachineContainer from '../containers/MachineContainer'
 import CreditsContainer from '../containers/CreditsContainer'
-import OrderContainer from '../containers/OrderContainer'
+// import OrderContainer from '../containers/OrderContainer'
 
  function Routes(props){
    return(
@@ -37,16 +37,34 @@ import OrderContainer from '../containers/OrderContainer'
        </Route>
        <Route path="/teas/:id?" render={routeProps =>
         <TeaContainer 
-        {...routeProps}
+          {...routeProps}
+
+          addToCart={props.addToCart}
+          cartBounce={props.cartBounce}
+          total={props.total}
+          totalItems={props.totalItems}
+          cartItems={props.cartItems}
+          removeProduct={props.removeProduct}
+          updateQuantity={props.updateQuantity}
+          productQuantity={props.productQuantity}
           />
         }
         />
-        <Route exact path="/bag">
+{/*        <Route exact path="/bag">
          <OrderContainer
-           currentUser={props.currentUser}
-           setCurrentUser={props.setCurrentUser}
+            currentUser={props.currentUser}
+            setCurrentUser={props.setCurrentUser}
+
+            addToCart={props.addToCart}
+            cartBounce={props.cartBounce}
+            total={props.total}
+            totalItems={props.totalItems}
+            cartItems={props.cartItems}
+            removeProduct={props.removeProduct}
+            updateQuantity={props.updateQuantity}
+            productQuantity={props.productQuantity}
            />
-       </Route>
+       </Route>*/}
        <Route path="/machine">
          <MachineContainer
            />

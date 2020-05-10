@@ -13,12 +13,15 @@ class TeaIndex extends Component {
         show={this.props.show}
         handleCloseShow={this.props.handleCloseShow}
         handleShow={this.props.handleShow}
+        addToCart={this.props.addToCart}
+        productQty={this.props.productQty}
+        updateQty={this.props.updateQty}
         />
       );
     })
     return (
       <div>
-        <div className="col-lg-6 mx-auto list-group">
+        <div className="col-lg-8 mx-auto list-group">
           {teas}
         </div>
         </div>
