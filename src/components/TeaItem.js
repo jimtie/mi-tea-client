@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import Counter from "./Counter";
 
 class TeaItem extends Component {
   
@@ -57,8 +58,13 @@ render() {
           <Link to={`/teas/${this.state.tea._id}`} onClick={this.props.handleShow} className="list-group-item-action">
           <div>
             <img className="teaImage rounded" src={this.state.tea.images.icon.src} />
-            <div className="teaName col-md-5 offset-1"><small>{this.state.tea.name}</small></div>
-            <div className="teaPrice col-md-2 offset-2"><small>${Number(this.state.tea.price*this.props.productQty).toFixed(2)}</small></div>
+            <div className="teaName col-md-5"><small>{this.state.tea.name}</small></div>
+            <Counter
+          productQuantity={quantity}
+          updateQuantity={this.props.updateQuantity}
+          resetQuantity={this.resetQuantity}
+        />
+            <div className="teaPrice col-md-2 offset-3"><small>${Number(this.state.tea.price*this.props.productQty).toFixed(2)}</small></div>
             </div>
           </Link>
         </div>

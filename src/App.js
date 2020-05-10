@@ -69,7 +69,7 @@ class App extends Component {
     this.sumTotalItems(this.state.cart);
     this.sumTotalAmount(this.state.cart);
   }
-  handleRemoveTea(id, e) {
+  handleRemoveTea = (id, e) => {
     let cart = this.state.cart;
     let index = cart.findIndex(x => x.id == id);
     cart.splice(index, 1);

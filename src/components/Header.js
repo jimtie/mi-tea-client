@@ -6,10 +6,12 @@ import Login from "./Login";
 
 import CartScrollBar from "./CartScrollBar";
 import EmptyCart from "./EmptyCart";
-import CSSTransitionGroup from "react-transition-group/cjs/CSSTransition";
+// import CSSTransitionGroup from "react-transition-group/cjs/CSSTransition";
+import CSSTransitionGroup from "react-transition-group/CSSTransitionGroup";
 import { findDOMNode } from "react-dom";
 
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import "../header.scss";
 
 
 class Header extends Component {
@@ -57,7 +59,7 @@ class Header extends Component {
           </div>
           <div className="product-total">
             <p className="quantity">
-              {product.quantity} {product.quantity > 1 ? "Nos." : "No."}{" "}
+              {"QTY: "}{product.quantity}{" "}
             </p>
             <p className="amount">{product.quantity * product.price}</p>
           </div>
@@ -76,15 +78,10 @@ class Header extends Component {
       view = <EmptyCart />;
     } else {
       view = (
-        <CSSTransitionGroup
-          transitionName="fadeIn"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}
-          component="ul"
-          className="cart-items"
+        <div
         >
           {cartItems}
-        </CSSTransitionGroup>
+        </div>
       );
     }
 
