@@ -68,6 +68,9 @@ class TeaContainer extends Component {
           show={this.state.show}
           handleCloseShow={this.handleCloseShow}
           handleShow={this.handleShow}
+          addToCart={this.props.addToCart}
+          productQty={this.props.productQuantity}
+          updateQty={this.updateQuantity}
           />
       </div>
     )

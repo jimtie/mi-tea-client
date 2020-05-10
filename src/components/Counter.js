@@ -56,20 +56,32 @@ class Counter extends Component {
   }
   render() {
     return (
+      <div className="inline">
       <div className="stepper-input">
-        <a href="#" className="decrement" onClick={this.decrement}>
-          –
-        </a>
-        <input
-          ref="feedQty"
-          type="number"
-          className="quantity"
-          value={this.state.value}
-          onChange={this.feed.bind(this)}
-        />
-        <a href="#" className="increment" onClick={this.increment}>
-          +
-        </a>
+        <form>
+          <div className="form-group d-flex flex-column">
+            <div>
+              <a href="#" className="increment" onClick={this.increment}>
+                +
+              </a>
+            </div>
+            <div className="col-xs-1">
+              <input
+                ref="feedQty"
+                type="number"
+                className="quantity"
+                value={this.state.value}
+                onChange={this.feed.bind(this)}
+              />
+            </div>
+            <div>
+              <a href="#" className="decrement" onClick={this.decrement}>
+                –
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
       </div>
     );
   }

@@ -53,20 +53,20 @@ render() {
   return(
     <>
     <div className="list-group-item">
-      <div className="row">
+      <div className="row article">
         <div className="col-md-10">
           <Link to={`/teas/${this.state.tea._id}`} onClick={this.props.handleShow} className="list-group-item-action">
           <div>
             <img className="teaImage rounded" src={this.state.tea.images.icon.src} />
             <div className="teaName col-md-5"><small>{this.state.tea.name}</small></div>
-            <Counter
-          productQuantity={quantity}
-          updateQuantity={this.props.updateQuantity}
-          resetQuantity={this.resetQuantity}
-        />
             <div className="teaPrice col-md-2 offset-3"><small>${Number(this.state.tea.price*this.props.productQty).toFixed(2)}</small></div>
             </div>
           </Link>
+          {/*<Counter
+          productQuantity={quantity}
+          updateQuantity={this.props.updateQty}
+          resetQuantity={this.resetQuantity}
+          />*/}
         </div>
         <div className="align-self-center">
           <button

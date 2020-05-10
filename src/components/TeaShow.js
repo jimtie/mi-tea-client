@@ -36,7 +36,7 @@ class TeaShow extends Component {
 							type="submit"
 							className="btn btn-outline-info float-right"
 							onClick={this.props.handleCloseShow}>
-							Buy it!
+							Add to Bag!
 						</button>
 					</Modal.Footer>
 			</Modal>

@@ -7,13 +7,22 @@ import UserModel from './models/user'
 import TeaModel from './models/tea'
 
 class App extends Component {
-  state = {
-    currentUser: JSON.parse(localStorage.getItem("user")),
-    cart: [],
-    totalItems: 0,
-    totalAmount: 0,
-    cartBounce: false,
-    quantity: 1,
+  constructor() {
+    super();
+    this.state = {
+      currentUser: JSON.parse(localStorage.getItem("user")),
+      cart: [],
+      totalItems: 0,
+      totalAmount: 0,
+      cartBounce: false,
+      quantity: 1,
+    };
+    this.handleAddToCart = this.handleAddToCart.bind(this);
+    this.sumTotalItems = this.sumTotalItems.bind(this);
+    this.sumTotalAmount = this.sumTotalAmount.bind(this);
+    this.checkTea = this.checkTea.bind(this);
+    this.updateQuantity = this.updateQuantity.bind(this);
+    this.handleRemoveTea = this.handleRemoveTea.bind(this);
   }
 
   setCurrentUser = (user) => {
@@ -114,7 +123,6 @@ class App extends Component {
       quantity: qty
     });
   }
-
 
   render() {
     return (
