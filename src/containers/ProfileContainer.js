@@ -55,13 +55,13 @@ class ProfileContainer extends Component {
 		}
 		return (
 			<div className="cityContainer row">
-        <div className="col-lg-3 offset-1">
+        <div className="col-lg-3 offset-2">
           <ProfileList
             user={this.state.user}
             logout={this.props.logout}
           />
         </div>
-        <div className="col-lg-8">
+        <div className="col-lg-7">
           {form}
         </div>
      	</div>

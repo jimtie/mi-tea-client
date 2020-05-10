@@ -24,3 +24,16 @@
 .align-center {
 	text-align: center;
 }
+
+.list-group-item-action {
+	position: relative;
+}
+
+.btn .buyit {
+	top:30%;
+	flex: center;
+}
+
+.stepper-input {
+	width:3px;
+}

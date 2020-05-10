@@ -77,7 +77,7 @@ class Addresses extends Component{
       <>
         <div className="container mt-4">
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-8">
               <h4 className="mb-3">
                 ADDRESS
                 <button className='btn fas fa-pen btn-outline-info ml-5 inline float-right' onClick={this.setActionCreate.bind(this)}>

@@ -24,13 +24,13 @@ class CreditsContainer extends Component {
   render(){
       return(
         <div className="creditContainer row">
-        <div className="col-lg-3 offset-1">
+        <div className="col-lg-3 offset-2">
           <ProfileList
             user={this.state.user}
             logout={this.props.logout}
           />
         </div>
-        <div className="col-lg-8">
+        <div className="col-lg-7">
           <Credits
             credits={this.state.credits}
             currentUser={this.props.currentUser}

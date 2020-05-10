@@ -25,7 +25,7 @@ function EditCreditForm(props){
           name="name"
           value={props.credit.name}
           maxLength={100}
-          placeholder="Name"
+          placeholder="Card Holder Name"
           />
       	</div>
       </div>
@@ -35,10 +35,10 @@ function EditCreditForm(props){
         <div>
         <input className="col-lg-5"
           onChange={props.onInputChange}
-          name="city"
+          name="expiration"
           value={props.credit.expiration}
           maxLength={4}
-          placeholder="Expiration"
+          placeholder="Expiration Date"
           />
       	</div>
       </div>
@@ -52,7 +52,7 @@ function EditCreditForm(props){
           value={props.credit.cvv}
           maxLength={3}
           required={true}
-          placeholder="CVV"
+          placeholder="CVV number"
           />
       	</div>
       </div>

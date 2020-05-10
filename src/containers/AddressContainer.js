@@ -24,13 +24,13 @@ class AddressContainer extends Component {
   render(){
       return(
         <div className="addressContainer row">
-        <div className="col-lg-3 offset-1">
+        <div className="col-lg-3 offset-2">
           <ProfileList
             user={this.state.user}
             logout={this.props.logout}
           />
         </div>
-        <div className="col-lg-8">
+        <div className="col-lg-7">
           <Addresses
             addresses={this.state.addresses}
             currentUser={this.props.currentUser}
