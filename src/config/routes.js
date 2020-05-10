@@ -50,21 +50,6 @@ import CreditsContainer from '../containers/CreditsContainer'
           />
         }
         />
-{/*        <Route exact path="/bag">
-         <OrderContainer
-            currentUser={props.currentUser}
-            setCurrentUser={props.setCurrentUser}
-
-            addToCart={props.addToCart}
-            cartBounce={props.cartBounce}
-            total={props.total}
-            totalItems={props.totalItems}
-            cartItems={props.cartItems}
-            removeProduct={props.removeProduct}
-            updateQuantity={props.updateQuantity}
-            productQuantity={props.productQuantity}
-           />
-       </Route>*/}
        <Route path="/machine">
          <MachineContainer
            />

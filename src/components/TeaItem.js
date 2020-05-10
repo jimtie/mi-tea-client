@@ -7,6 +7,7 @@ constructor(props) {
   super(props);
   this.state = {
     tea: this.props.tea,
+    teaId: this.props.key,
     selectedProduct: {},
     isAdded: false,
   }
@@ -16,16 +17,11 @@ addToCart(image, name, price, id, quantity) {
     this.setState(
       {
         selectedProduct: {
-          // image: this.props.tea.images.icon.src,
-          // name: this.props.tea.name,
-          // price: this.props.tea.price,
-          // id: this.props.teaId,
-          // quantity: this.props.productQty,
           image: image,
           name: name,
           price: price,
           id: id,
-          quantity: quantity
+          quantity: quantity,
         }
       },
       function() {
@@ -42,12 +38,17 @@ addToCart(image, name, price, id, quantity) {
             isAdded: false,
             selectedProduct: {}
           });
-        }, 2000);
+        }, 1000);
       }
     );
-  }
+  };
 
 render() {
+  let image = this.props.image;
+    let name = this.props.name;
+    let price = this.props.price;
+    let id = this.props.id;
+    let quantity = this.props.productQty;
   return(
     <>
     <div className="list-group-item">
@@ -65,7 +66,14 @@ render() {
           <button
             type="button"
             className={!this.state.isAdded ? "btn btn-outline-info" : "btn btn-info"}
-            onClick={()=>this.addToCart()}
+            onClick={this.addToCart.bind(
+              this,
+              image,
+              name,
+              price,
+              id,
+              quantity
+            )}
           >
             {!this.state.isAdded ? "Add to Bag" : "✔ Added"}
           </button>

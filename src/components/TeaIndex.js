@@ -9,13 +9,17 @@ class TeaIndex extends Component {
       <TeaItem
         key={tea._id}
         tea={tea}
-        teaId={this.props.teaId}
         show={this.props.show}
         handleCloseShow={this.props.handleCloseShow}
         handleShow={this.props.handleShow}
         addToCart={this.props.addToCart}
         productQty={this.props.productQty}
         updateQty={this.props.updateQty}
+
+        name={tea.name}
+        image={tea.images.icon.src}
+        id={tea._id}
+        price={tea.price}
         />
       );
     })

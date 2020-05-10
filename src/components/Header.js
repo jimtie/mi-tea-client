@@ -20,7 +20,6 @@ class Header extends Component {
 
       showCart: false,
       cart: this.props.cartItems,
-      mobileSearch: false,
     };
 
   handleCloseSignUp = () => this.setState({signup: false});
@@ -42,32 +41,7 @@ class Header extends Component {
   handleSubmit(e) {
     e.preventDefault();
   }
-  handleClickOutside(event) {
-    const cartNode = findDOMNode(this.refs.cartPreview);
-    const buttonNode = findDOMNode(this.refs.cartButton);
-    if (cartNode.classList.contains("active")) {
-      if (!cartNode || !cartNode.contains(event.target)) {
-        this.setState({
-          showCart: false
-        });
-        event.stopPropagation();
-      }
-    }
-  }
-  componentDidMount() {
-    document.addEventListener(
-      "click",
-      this.handleClickOutside.bind(this),
-      true
-    );
-  }
-  componentWillUnmount() {
-    document.removeEventListener(
-      "click",
-      this.handleClickOutside.bind(this),
-      true
-    );
-  }
+  
 
 
   render(props) {
@@ -153,7 +127,7 @@ class Header extends Component {
           }
 
             <li className="nav-item">
-              <button className="nav-link btn btn-outline-dark ml-5" onClick={this.handleShowCart} ref="cartButton">My Bag({this.props.totalItems})</button>
+              <button className="nav-link btn btn-outline-dark ml-5" onClick={this.handleShowCart}>My Bag({this.props.totalItems})</button>
             </li>
 
             </ul>
@@ -193,7 +167,7 @@ class Header extends Component {
         <div className={
             this.state.showCart ? "cart-preview active" : "cart-preview"
           }
-          ref="cartPreview"
+
         >
           <CartScrollBar>{view}</CartScrollBar>
           <div className="action-block">
