@@ -13,9 +13,9 @@ class MachineIndex extends Component {
       );
     })
     return (
-        <div className="col-lg-6 offset-3 list-group">
+        <>
           {machines}
-        </div>
+        </>
     )
   }
 }

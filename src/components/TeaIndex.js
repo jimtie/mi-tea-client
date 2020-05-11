@@ -5,6 +5,7 @@ class TeaIndex extends Component {
 
   render() {
     let teas = this.props.teas.map((tea) =>{
+      console.log(this.props);
     return (
       <TeaItem
         key={tea._id}

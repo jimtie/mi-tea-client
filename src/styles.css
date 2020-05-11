@@ -1,6 +1,6 @@
 
 .teaImage {
-	width: 15%;
+	width: 22%;
 	display: inline-block;
 }
 
@@ -34,6 +34,37 @@
 	flex: center;
 }
 
-.stepper-input {
-	width:3px;
+input {
+	width:40%;
+}
+
+.row .article {
+  display: flex;
+  align-items: center;
+  height: 120px;
+  background: white;
+}
+
+.Item-1 {
+  height: 80px;
+  margin: 0px;
+}
+
+.Item-2 {
+  height: 80px;
+  margin: 0px;
+}
+
+.Item-3 {
+  height: 22px;
+  margin-top: 0px;
+}
+
+.backgroundImage {
+	background-image: url('https://images.unsplash.com/photo-1492778297155-7be4c83960c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+	background-size: cover;
+	background-position: center;
+	height: 500px;
+	margin-bottom: 48px;
+	margin-bottom: 3rem;
 }
