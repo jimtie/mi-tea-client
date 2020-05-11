@@ -170,9 +170,9 @@ class Header extends Component {
           <div className="action-block">
             <button
               type="button"
-              className={this.state.cart.length > 0 ? " " : "disabled"}
+              className={this.state.cart.length > 0 ? "btn btn-outline-info" : "disabled"}
             >
-              PROCEED TO CHECKOUT
+              CHECKOUT
             </button>
           </div>
         </div>

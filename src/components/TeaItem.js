@@ -72,7 +72,7 @@ render() {
         </div>
         <div className="col-md-2 align-self-center Item-3">
           <Link to={`/teas/${this.state.tea._id}`} onClick={this.props.handleShow} className="list-group-item-action">
-            <div className="teaPrice col-md-2 offset-3"><small>${Number(this.state.tea.price*this.props.productQty).toFixed(2)}</small></div>
+            <div className="teaPrice col-md-2 offset-3"><small>${Number(this.state.tea.price).toFixed(2)}</small></div>
           </Link>
         </div>
         <div className="align-self-center">
