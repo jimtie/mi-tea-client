@@ -10,10 +10,12 @@ state = {
 render() {
   return(
     <>
-      <a href="#" className="list-group-item list-group-item-action col-md-12">
-        <img className="machineImage rounded" src={this.state.machine.images.icon.src} />
-        <div className="machineName col-md-5 offset-1"><small>{this.state.machine.name}</small></div>
-        <div className="machinePrice"><small>${this.state.machine.price}</small></div>
+      <a href="#" className="card container">
+        <img className="machineImage rounded card-img-top" src={this.state.machine.images.icon.src} />
+        <div className="bottom-left text-secondary">
+          <div className="machineName"><h4><strong>{this.state.machine.name}</strong></h4></div>
+          <div className="machinePrice inline"><h4><strong>${this.state.machine.price}</strong></h4></div>
+        </div>
       </a>
     </>
     )

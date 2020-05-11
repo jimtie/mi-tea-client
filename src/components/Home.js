@@ -1,24 +1,26 @@
 import React, {Component} from 'react';
+import "../styles.css"
+
 
 class Home extends Component {
 
 	render(){
 
 		return (
-			<div>
-				<h2 className="text-center my-4">Mi-TEA</h2>
-				<div className="row justify-content-center">
-					<div className="col-md">
-						<h4>ABC</h4>
-						<p>Ready for your next adventure but not sure where to go or what to do when you get there? Enter Wayfarer. Explore cities and read posts to get ready for your best trip yet.</p>
+			<div className="backgroundImage">
+				<h2 className="text-center my-4 text-light">Mi-TEA</h2>
+				<div className="row justify-content-center" >
+					<div className="col-md text-light">
+						<h5><strong>How did tea spread around the world?</strong></h5>
+						<small>Sea Trade Routes Increase the Spread of Tea Throughout the World. ... The custom of drinking tea spread into France in 1638, then to England in 1645, and into Germany in 1650. Finally in the middle of the 17th century, the Dutch traders introduced tea to North America.</small>
 					</div>
-					<div className="col-md">
-						<h4>DEF</h4>
-						<p>Know of an awesome hike? Eat the best meal of your life? Your Wayfarer community wants to know! Hit us with a post and keep the travel vibes vibing.</p>
+					<div className="col-md text-light">
+						<h5><strong>Why is blending necessary for tea?</strong></h5>
+						<small>The aim of blending is to create a well-balanced flavour using different origins and characters. This also allows for variations in tea leaf quality and differences from season to season to be smoothed out. ... Tea can be flavoured in large blending drums with perfumes, flavourants, or essential oils added.</small>
 					</div>
-					<div className="col-md">
-						<h4>GHI</h4>
-						<p>After you tell us all about your latest trip, start planning your next great adventure right here on Wayfarer. We can't wait for you to start the journey with us.</p>
+					<div className="col-md text-light">
+						<h5><strong>Can you mix herbs together for tea?</strong></h5>
+						<small>Mixing your own herbs for tea is as easy as choosing the scents that appeal to you and blending up your favorite choices. ... After mixing up your favorite blend of herb tea, keep it in a glass jar in a dark place. Use at least one teaspoon of dried herbs per cup of water, more to taste.</small>
 					</div>
 				</div>
 			</div>

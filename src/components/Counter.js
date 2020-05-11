@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-// import "../styles.css"
+import "../styles.css"
 
 class Counter extends Component {
   constructor(props) {
     super(props);
-    this.state = { value: this.props.productQuantity };
+    this.state = { value: this.props.productQuantity, updateQuantity: this.props.updateQuantity };
     this.increment = this.increment.bind(this);
     this.decrement = this.decrement.bind(this);
   }
@@ -39,6 +39,7 @@ class Counter extends Component {
   }
 
   feed(e) {
+    console.log(JSON.stringify(this.props));
     this.setState(
       {
         value: this.refs.feedQty.value
@@ -56,7 +57,6 @@ class Counter extends Component {
   }
   render() {
     return (
-      <div className="inline">
       <div className="stepper-input">
         <form>
           <div className="form-group d-flex flex-column">
@@ -81,7 +81,6 @@ class Counter extends Component {
             </div>
           </div>
         </form>
-      </div>
       </div>
     );
   }

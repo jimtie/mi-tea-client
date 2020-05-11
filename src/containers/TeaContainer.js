@@ -13,7 +13,6 @@ class TeaContainer extends Component {
     cartBounce: this.props.cartBounce,
     quantity: this.props.quantity,
     removeProduct: this.props.removeProduct,
-    updateQuantity: this.props.updateQuantity,
     productQuantity: this.props.productQuantity,
     teaId: '',
     tea: '',
@@ -58,7 +57,7 @@ class TeaContainer extends Component {
           show={this.state.show}
           addToCart={this.props.addToCart}
           productQty={this.props.productQuantity}
-          updateQty={this.updateQuantity}
+          updateQty={this.props.updateQuantity}
           handleCloseShow={this.handleCloseShow}
           handleShow={this.handleShow}
           />

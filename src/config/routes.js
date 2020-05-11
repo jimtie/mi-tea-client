@@ -8,7 +8,8 @@ import TeaContainer from '../containers/TeaContainer'
 import TeaItem from '../components/TeaItem'
 import MachineContainer from '../containers/MachineContainer'
 import CreditsContainer from '../containers/CreditsContainer'
-// import OrderContainer from '../containers/OrderContainer'
+import About from '../components/About'
+import Contact from '../components/Contact'
 
  function Routes(props){
    return(
@@ -16,12 +17,18 @@ import CreditsContainer from '../containers/CreditsContainer'
        <Route exact path="/">
          <Home />
        </Route>
+       <Route path="/contact">
+         <Contact />
+       </Route>
        <Route exact path="/profile">
          <ProfileContainer
            currentUser={props.currentUser}
            setCurrentUser={props.setCurrentUser}
            logout={props.logout}
            />
+       </Route>
+       <Route path="/About">
+         <About />
        </Route>
        <Route path="/profile/address">
          <AddressContainer
