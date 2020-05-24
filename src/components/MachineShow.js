@@ -10,13 +10,14 @@ state = {
 render() {
   return(
     <>
-      <a href="#" className="card container">
-        <img className="machineImage rounded card-img-top" src={this.state.machine.images.icon.src} />
-{/*        <div className="bottom-left text-secondary">
-          <div className="machineName"><h4><strong>{this.state.machine.name}</strong></h4></div>
-          <div className="machinePrice inline"><h4><strong>${this.state.machine.price}</strong></h4></div>
-        </div>*/}
-      </a>
+        <div className="machineImage">
+        </div>
+        <article className="machine-text">
+          <p><small>
+            Mi-TEA machine is designed for tea lovers. It enables users to brew up to 3 kind of teas at the same time and them blended them together in different portions. It's all about flavor and fun!
+          </small></p>
+        </article>
+
     </>
     )
   }

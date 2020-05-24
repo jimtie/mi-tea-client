@@ -91,7 +91,7 @@ class Header extends Component {
     <>
       <nav className="navbar navbar-expand-md">
         <div className="container">
-          <Link className="navbar-brand text-dark" to="/">Mi-TEA</Link>
+          <Link className="navbar-brand text-dark title" to="/" style={{'font-family': 'Ubuntu,sans-serif'}}><i class="fas fa-leaf"></i>Mi-TEA</Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

@@ -29,6 +29,11 @@
 	position: relative;
 }
 
+.nav-icon {
+	text-align: center;
+	margin-bottom: 3px;
+}
+
 .btn .buyit {
 	top:30%;
 	flex: center;
@@ -64,7 +69,98 @@
 	background-image: url('https://images.unsplash.com/photo-1492778297155-7be4c83960c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
 	background-size: cover;
 	background-position: center;
-	height: 500px;
-	margin-bottom: 48px;
-	margin-bottom: 3rem;
+	width:58%;
+	margin: auto;
+	height: 400px;
+	margin-top: 15px;
 }
+
+.home-text {
+	position: relative;
+	margin-left: 30px;
+	padding-top: 280px;
+}
+
+.items-carousel {
+	width:58%;
+	margin:auto;
+	margin-top: 15px;
+}
+
+.c-tea {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+  	vertical-align: bottom;
+  	position: relative;
+}
+
+.c-tea-text {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: white;
+	opacity: 0.8;
+	text-align:center;
+}
+
+.about-section {
+	width: 58%;
+	margin:auto;
+	margin-top:15px;
+}
+
+.about-left {
+	width:49%;
+	height: 180px;
+	float:left;
+	background-image: url('/paul-vincent-roll-c61jL_NpAn8-unsplash.jpg');
+	background-size: cover;
+	margin-right:15px;
+}
+
+.about-right {
+	margin-left:51%;
+	height: 180px;
+	background-image: url('/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg');
+	background-size: cover;
+}
+
+.about-left, .about-right {
+	text-align: center;
+	padding-top: 70px;
+}
+
+.home-machine {
+	width: 58%;
+	margin:auto;
+	margin-top:15px;
+}
+
+.home-machine-img {
+	background-image: url('https://images.benchmarkemail.com/client1213469/image8627465.jpeg');
+	background-size: cover;
+	height:800px;
+}
+
+.machineImage {
+	background-image: url('https://images.benchmarkemail.com/client1213469/image8627465.jpeg');
+	background-size: cover;
+	height:600px;
+	width:58%;
+	margin: auto;
+	margin-top: 15px
+}
+
+.machine-text {
+	font-family: 'Open Sans', sans-serif;
+	margin:auto;
+	width:45%;
+}
+
+#contact{margin-top:15px; padding:50px 15px;text-align:center}
+#contact h4{margin:0 0 15px 0;color:#fff;font-weight:500}
+#contact-form{max-width:500px;margin:0 auto}
+#contact-form input,#contact-form textarea{display:block;width:100%;padding:10px;border-radius:4px;border:none;margin-bottom:10px;color:#fff;transition:.5s ease all}
+#contact-form textarea{height:150px;resize:none}
+#contact-form button{display:block;width:100%;background:#fff;border-radius:4px;padding:5px 10px;border:none;font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);transition:.5s ease all}
+#contact-form button:hover{box-shadow:0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23)}

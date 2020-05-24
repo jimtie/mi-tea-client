@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Navbar from './components/Navbar'
 import UserModel from './models/user'
 import TeaModel from './models/tea'
+// import './about.css'
 
 class App extends Component {
   constructor() {
@@ -143,7 +144,7 @@ class App extends Component {
           productQuantity={this.state.quantity}
         />
         <Navbar />
-        <div className="container">
+
           <Routes
             currentUser={this.state.currentUser}
             setCurrentUser={this.setCurrentUser}
@@ -158,7 +159,7 @@ class App extends Component {
             updateQuantity={this.updateQuantity}
             productQuantity={this.state.quantity}
           />
-        </div>
+        
       </div>
     );
   }

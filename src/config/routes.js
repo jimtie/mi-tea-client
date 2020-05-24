@@ -42,6 +42,13 @@ import Contact from '../components/Contact'
            logout={props.logout}
            />
        </Route>
+
+       <Route path="/machine">
+         <MachineContainer
+           />
+       </Route>
+       
+       <div className="container">
        <Route path="/teas/:id?" render={routeProps =>
         <TeaContainer 
           {...routeProps}
@@ -57,10 +64,10 @@ import Contact from '../components/Contact'
           />
         }
         />
-       <Route path="/machine">
-         <MachineContainer
-           />
-       </Route>
+        </div>
+
+       
+
      </Switch>
    );
 }
