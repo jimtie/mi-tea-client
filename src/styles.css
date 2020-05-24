@@ -145,7 +145,7 @@
 .machineImage {
 	background-image: url('https://images.benchmarkemail.com/client1213469/image8627465.jpeg');
 	background-size: cover;
-	height:600px;
+	height:800px;
 	width:58%;
 	margin: auto;
 	margin-top: 15px
@@ -154,7 +154,7 @@
 .machine-text {
 	font-family: 'Open Sans', sans-serif;
 	margin:auto;
-	width:45%;
+	width:31%;
 }
 
 #contact{margin-top:15px; padding:50px 15px;text-align:center}
