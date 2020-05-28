@@ -117,21 +117,21 @@ React | JavaScript | MongoDB | Mongoose | Express | Bootstrap | Node.js
 
 * reorder
 
-## Sprint 1 (May/1 - May/3)
+#### Sprint 1 (May/1 - May/3)
 May/1: Finish User Flow, start with backend
 May/2: Finish Half of back end, set up server, models, most of routes and basic seed files
 May/3: Finish backend, testing
 
-## Sprint 2 (May/4 - May/6)
+#### Sprint 2 (May/4 - May/6)
 May/4: Start frontend, set up all routes, components, and relations, all the pages should be able to connect
 May/5: have register and login work, all the pages look  like final design
 May/6: able to make orders, without having credit card info, able to review order history after log in
 
-## Sprint 3 (May/7 - May/8)
+#### Sprint 3 (May/7 - May/8)
 May/7: Add more data to seed file and authorize credit card, have to select a card and address to finish the order
 May/8: Fully functional website done
 
-## Sprint 4 (May/9 - May/10)
+#### Sprint 4 (May/9 - May/10)
 May/9: work on styling with bootstrap, css and sass, heroku deploying
 May/10: Extra day to fix bugs and work on stretch goals if there is extra time
 
