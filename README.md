@@ -5,8 +5,6 @@ It's the website for displaying and selling Mi-TEA machine and tea ingredients, 
 ## Index
 
 * [User Stories](#User-Stories)
-* [User Flow](#User-Flow)
-* [Site Map](#Site-Map)
 * [Wireframes](#Wireframes)
 * [Data Models](#Data-Models)
 * [Technologies](#Technologies)
@@ -87,16 +85,6 @@ Order history Page contains:
 * List of Orders Sort By date:
 	* Name
 	* Image
-
-## User Flow
-
-![image](public/img/readme/gloomap_1e295fa1.png)
-
-See user flow on [gloomaps](https://www.gloomaps.com/wgvkaMos6a)
-
-## Site Map
-
-![image](public/img/readme/Sitemap_final.jpg)
 
 ## Wireframes
 
