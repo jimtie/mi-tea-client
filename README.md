@@ -4,12 +4,17 @@ It's the website for displaying and selling Mi-TEA machine and tea ingredients, 
 
 ## Index
 
+* [Test the App](#Test-the-App)
 * [User Stories](#User-Stories)
 * [Wireframes](#Wireframes)
 * [ERD](#ERD)
 * [Technologies](#Technologies)
 * [Stretch Goals](#Stretch-Goals)
 * [License](#License)
+
+## Test the App
+1. go to heroku website "mi-tea.herokuapp.com"
+2. login by using user name: 'jimmychen.xin@gmail.com', password: 'jimmy000'
 
 ## User Stories
 
