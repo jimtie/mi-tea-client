@@ -6,7 +6,7 @@ It's the website for displaying and selling Mi-TEA machine and tea ingredients, 
 
 * [User Stories](#User-Stories)
 * [Wireframes](#Wireframes)
-* [Data Models](#Data-Models)
+* [ERD](#ERD)
 * [Technologies](#Technologies)
 * [Stretch Goals](#Stretch-Goals)
 * [License](#License)
